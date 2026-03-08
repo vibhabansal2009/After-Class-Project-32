@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+        function checkPassword() {
+            var pass1 = document.getElementById("password").value;
+            var pass2 = document.getElementById("confirm").value;
+
+            if (pass1 === pass2) {
+                document.getElementById("result").innerHTML = "Password Matched!";
+
+            } else {
+                document.getElementById("result").innerHTML = "Password Does Not Match!";
+
+            }
+            return false;
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <h3>Create Account</h3>
+    <form onsubmit="return checkPassword()">
+
+        Password: <br>
+        <input type="password" id="password"><br><br>
+
+        Confirm Password: <br>
+        <input type="password" id="confirm"><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <p id="result"></p>
+
+</body>
+
+</html>
